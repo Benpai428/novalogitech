@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trang chủ - NovaLogiTech</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>NovaLogiTech</h2>
+      <nav>
+        <a href="gioithieu.html">Giới thiệu</a>
+        <a href="dichvu.html">Dịch vụ</a>
+        <a href="lienhe.html">Liên hệ</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="hero">
+        <h1>NovaLogiTech</h1>
+        <p class="subtitle">Giải pháp vận tải & công nghệ tối ưu</p>
+      </header>
+
+      <!-- Slider -->
+      <section class="slider">
+        <div class="slides">
+          <img src="images/truck.jpg" alt="Xe tải vận chuyển" class="slide active" />
+          <img src="images/warehouse.jpg" alt="Kho thông minh" class="slide" />
+          <img src="images/technology.jpg" alt="Công nghệ điều phối" class="slide" />
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 NovaLogiTech. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    setInterval(() => {
+      slides[currentSlide].classList.remove("active");
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add("active");
+    }, 3000);
+  </script>
+</body>
+</html>
